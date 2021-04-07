@@ -621,6 +621,12 @@ $RECYCLE.BIN/
 amplify/mock-data
 
 
+
+# Quasar/dev
+
+.quasar/
+TODO.md
+
 #amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*
@@ -639,9 +645,3 @@ amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
-
-
-# Quasar/dev
-
-.quasar/
-TODO.md

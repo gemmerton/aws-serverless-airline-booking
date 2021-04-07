@@ -1,4 +1,22 @@
 {
+  "devj": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aws-serverless-airline-booking-devj-92924-authRole",
+      "UnauthRoleArn": "arn:aws:iam::465087668179:role/amplify-aws-serverless-airline-booking-devj-92924-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::465087668179:role/amplify-aws-serverless-airline-booking-devj-92924-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-aws-serverless-airline-booking-devj-92924-deployment",
+      "UnauthRoleName": "amplify-aws-serverless-airline-booking-devj-92924-unauthRole",
+      "StackName": "amplify-aws-serverless-airline-booking-devj-92924",
+      "StackId": "arn:aws:cloudformation:eu-west-1:465087668179:stack/amplify-aws-serverless-airline-booking-devj-92924/be29c310-9783-11eb-9a46-0610514ee81b",
+      "AmplifyAppId": "dh2qi0u6bke8q"
+    },
+    "categories": {
+      "auth": {
+        "awsserverlessairline44ea6421": {}
+      }
+    }
+  },
   "quasarone": {
     "awscloudformation": {
       "AuthRoleName": "amplify-awsserverlessairline-quasarone-53814-authRole",

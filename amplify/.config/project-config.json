@@ -2,16 +2,16 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "aws-serverless-airline-booking",
-  "version": "3.0",
+  "projectName": "awsserverlessairline",
+  "version": "3.1",
   "frontend": "javascript",
   "javascript": {
-    "framework": "vue",
+    "framework": "none",
     "config": {
-      "SourceDir": "src/frontend",
-      "DistributionDir": "src/frontend/dist",
-      "BuildCommand": "npm run-script build --prefix src/frontend",
-      "StartCommand": "npm run-script serve --prefix src/frontend"
+      "SourceDir": "src",
+      "DistributionDir": "dist",
+      "BuildCommand": "npm run-script build",
+      "StartCommand": "npm run-script start"
     }
   }
 }
