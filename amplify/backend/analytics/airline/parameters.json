@@ -1,0 +1,21 @@
+{
+    "appName": "airline",
+    "roleName": "pinpointLambdaRole617dd092",
+    "cloudformationPolicyName": "cloudformationPolicy617dd092",
+    "cloudWatchPolicyName": "cloudWatchPolicy617dd092",
+    "pinpointPolicyName": "pinpointPolicy617dd092",
+    "authPolicyName": "pinpoint_amplify_617dd092",
+    "unauthPolicyName": "pinpoint_amplify_617dd092",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

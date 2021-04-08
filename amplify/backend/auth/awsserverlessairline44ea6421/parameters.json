@@ -1,6 +1,6 @@
 {
     "identityPoolName": "awsserverlessairline44ea6421_identitypool_44ea6421",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "awsser44ea6421",
     "userPoolName": "awsserverlessairline44ea6421_userpool_44ea6421",
     "autoVerifiedAttributes": [
