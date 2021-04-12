@@ -300,6 +300,13 @@ export default {
           outboundFlight: this.selectedFlight
         })
 
+        await Analytics.record({
+          name: 'create_booking',
+          attributes: {
+            outboundFlight: this.selectedFlight // probably better to just grab the attributes you care about
+          }
+        })
+
         // eslint-disable-next-line
         Loading.show({
           message: `Your booking is being processed - We'll soon contact you via ${this.customer.email}.`
