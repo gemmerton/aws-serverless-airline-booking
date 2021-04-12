@@ -249,14 +249,14 @@ export default {
             departure: this.departureCity.code,
             arrival: this.arrivalCity.code
           }
-        })
+        });
         name: 'searchResults',
         query: {
           date: date.formatDate(this.departureDate, 'YYYY-MM-DD'),
           departure: this.departureCity.code,
           arrival: this.arrivalCity.code
         }
-      })
+      });
     },
     swapDirection() {
       let departure = this.departureCity
