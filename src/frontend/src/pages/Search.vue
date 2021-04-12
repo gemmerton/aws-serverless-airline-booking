@@ -242,14 +242,14 @@ export default {
      * search method collects form data, create queryStrings, and redirects to Search Results view
      */
     search() {
+      await Analytics.record({
+        name: 'search',
+        attributes: {
+          departure: this.departureCity.code,
+          arrival: this.arrivalCity.code
+        }
+      });
       this.$router.push({
-        await Analytics.record({
-          name: 'search',
-          attributes: {
-            departure: this.departureCity.code,
-            arrival: this.arrivalCity.code
-          }
-        });
         name: 'searchResults',
         query: {
           date: date.formatDate(this.departureDate, 'YYYY-MM-DD'),
