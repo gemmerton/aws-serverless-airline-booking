@@ -249,7 +249,7 @@ export default {
             departure: this.departureCity.code,
             arrival: this.arrivalCity.code
           }
-        }),
+        })
         name: 'searchResults',
         query: {
           date: date.formatDate(this.departureDate, 'YYYY-MM-DD'),
