@@ -304,6 +304,7 @@ export default {
           name: 'create_booking',
           attributes: {
             outboundFlight: this.selectedFlight // probably better to just grab the attributes you care about
+            // need to capture userID as well
           }
         })
 
