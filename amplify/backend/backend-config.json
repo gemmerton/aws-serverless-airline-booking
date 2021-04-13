@@ -25,7 +25,7 @@
     }
   },
   "analytics": {
-    "airlinedevc": {
+    "airline": {
       "service": "Pinpoint",
       "providerPlugin": "awscloudformation"
     }
