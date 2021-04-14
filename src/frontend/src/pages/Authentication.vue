@@ -53,12 +53,12 @@ export default {
       if (authState === AuthState.SignedIn) {
         logger.debug('user successfully signed in!')
         logger.debug('user data: ', authData)
-        Analytics.updateEndpoint({
-          User: {
-            UserId: authData.attributes.sub
-          }
-        }).then(() => {
-        })
+        //Analytics.updateEndpoint({
+        //  User: {
+        //    UserId: authData.attributes.sub
+        //  }
+        //}).then(() => {
+        //})
         this.$router.push({ name: this.redirectTo })
       }
     })
