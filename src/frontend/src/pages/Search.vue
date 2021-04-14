@@ -255,7 +255,7 @@ export default {
           date: date.formatDate(this.departureDate, 'YYYY-MM-DD'),
           departure: this.departureCity.code,
           arrival: this.arrivalCity.code,
-          customerId: customer.sub
+          customerId: this.customer.sub
         }
       })
       this.$router.push({
