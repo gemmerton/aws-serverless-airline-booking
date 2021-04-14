@@ -23,10 +23,13 @@
 // @ts-ignore
 import { onAuthUIStateChange, AuthState } from '@aws-amplify/ui-components'
 import { Hub, Logger } from '@aws-amplify/core'
+import { Analytics } from '@aws-amplify/analytics'
 
 const logger = new Logger('Authentication')
 const noAuthMessage = 'user is undefined'
 const authMessageChannel = 'UI Auth'
+
+
 
 /**
  * Authentication view authenticates a customer and redirects to desired page if successful
@@ -52,6 +55,9 @@ export default {
       if (authState === AuthState.SignedIn) {
         logger.debug('user successfully signed in!')
         logger.debug('user data: ', authData)
+        Analytics.updateEndpoint({
+          userId: authData.attributes.sub
+        })
         this.$router.push({ name: this.redirectTo })
       }
     })
