@@ -185,10 +185,10 @@ import { required, minLength } from 'vuelidate/lib/validators'
 import { airportList } from '../shared/mixins/airportSearch'
 import { airportSearchMixin } from '../shared/mixins'
 import { Logger } from '@aws-amplify/core'
-import Analytics from '@aws-amplify/analytics'
+import { Analytics } from '@aws-amplify/analytics'
 
 const logger = new Logger('Search')
-
+const customerId = rootGetters['profile/userAttributes'].sub
 /**
  * Validate given input against list of valid IATA airports
  * @param {string} value - Given airport input by customer
@@ -246,8 +246,10 @@ export default {
       await Analytics.record({
         name: 'search',
         attributes: {
+          date: date.formatDate(this.departureDate, 'YYYY-MM-DD'),
           departure: this.departureCity.code,
-          arrival: this.arrivalCity.code
+          arrival: this.arrivalCity.code,
+          customer: customerId
         }
       })
       this.$router.push({
