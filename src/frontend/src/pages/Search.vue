@@ -185,6 +185,7 @@ import { required, minLength } from 'vuelidate/lib/validators'
 import { airportList } from '../shared/mixins/airportSearch'
 import { airportSearchMixin } from '../shared/mixins'
 import { Logger } from '@aws-amplify/core'
+import Analytics from '@aws-amplify/analytics'
 
 const logger = new Logger('Search')
 
