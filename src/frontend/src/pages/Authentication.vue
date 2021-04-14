@@ -29,8 +29,6 @@ const logger = new Logger('Authentication')
 const noAuthMessage = 'user is undefined'
 const authMessageChannel = 'UI Auth'
 
-
-
 /**
  * Authentication view authenticates a customer and redirects to desired page if successful
  * Non-authenticated users are redirected to this view via Route Guards
@@ -57,7 +55,8 @@ export default {
         logger.debug('user data: ', authData)
         Analytics.updateEndpoint({
           userId: authData.attributes.sub
-        })
+          }).then(() => {
+        });
         this.$router.push({ name: this.redirectTo })
       }
     })
