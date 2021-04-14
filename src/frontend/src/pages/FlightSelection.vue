@@ -303,7 +303,8 @@ export default {
         await Analytics.record({
           name: 'create_booking',
           attributes: {
-            outboundFlight: this.selectedFlight // probably better to just grab the attributes you care about
+            outboundFlight: this.selectedFlight, // probably better to just grab the attributes you care about
+            customerId: this.customer.sub
             // need to capture userID as well
           }
         })

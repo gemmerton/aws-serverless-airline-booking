@@ -188,7 +188,7 @@ import { Logger } from '@aws-amplify/core'
 import { Analytics } from '@aws-amplify/analytics'
 
 const logger = new Logger('Search')
-const customerId = rootGetters['profile/userAttributes'].sub
+//const customerId = rootGetters['profile/userAttributes'].sub
 /**
  * Validate given input against list of valid IATA airports
  * @param {string} value - Given airport input by customer
@@ -226,6 +226,11 @@ export default {
       required
     }
   },
+  computed: {
+    ...mapGetters({
+      customer: 'profile/userAttributes'
+    })
+  },
   data() {
     return {
       /**
@@ -249,7 +254,7 @@ export default {
           date: date.formatDate(this.departureDate, 'YYYY-MM-DD'),
           departure: this.departureCity.code,
           arrival: this.arrivalCity.code,
-          customer: customerId
+          customerId: customer.sub
         }
       })
       this.$router.push({
