@@ -1,0 +1,21 @@
+{
+    "appName": "awsserverlessairline",
+    "roleName": "pinpointLambdaRole1140f3e8",
+    "cloudformationPolicyName": "cloudformationPolicy1140f3e8",
+    "cloudWatchPolicyName": "cloudWatchPolicy1140f3e8",
+    "pinpointPolicyName": "pinpointPolicy1140f3e8",
+    "authPolicyName": "pinpoint_amplify_1140f3e8",
+    "unauthPolicyName": "pinpoint_amplify_1140f3e8",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
