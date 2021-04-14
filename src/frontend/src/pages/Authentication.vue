@@ -58,7 +58,7 @@ export default {
             UserId: authData.attributes.sub
           }
         }).then(() => {
-        });
+        })
         this.$router.push({ name: this.redirectTo })
       }
     })
