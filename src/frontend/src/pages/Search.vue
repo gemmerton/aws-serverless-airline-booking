@@ -241,7 +241,14 @@ export default {
     /**
      * search method collects form data, create queryStrings, and redirects to Search Results view
      */
-    search() {
+    async search() {
+      await Analytics.record({
+        name: 'search',
+        attributes: {
+          departure: this.departureCity.code,
+          arrival: this.arrivalCity.code
+        }
+      })
       this.$router.push({
         name: 'searchResults',
         query: {
