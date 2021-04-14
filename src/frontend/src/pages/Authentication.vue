@@ -23,7 +23,7 @@
 // @ts-ignore
 import { onAuthUIStateChange, AuthState } from '@aws-amplify/ui-components'
 import { Hub, Logger } from '@aws-amplify/core'
-import { Analytics } from '@aws-amplify/analytics'
+import Analytics from '@aws-amplify/analytics'
 
 const logger = new Logger('Authentication')
 const noAuthMessage = 'user is undefined'
@@ -54,8 +54,10 @@ export default {
         logger.debug('user successfully signed in!')
         logger.debug('user data: ', authData)
         Analytics.updateEndpoint({
-          userId: authData.attributes.sub
-          }).then(() => {
+          User: {
+            UserId: authData.attributes.sub
+          }
+        }).then(() => {
         });
         this.$router.push({ name: this.redirectTo })
       }
