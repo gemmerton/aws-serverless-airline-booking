@@ -54,8 +54,8 @@ export default {
         logger.debug('user successfully signed in!')
         logger.debug('user data: ', authData)
         Analytics.updateEndpoint({
-          user: {
-            userId: this.user.attributes.sub
+          User: {
+            UserId: this.user.attributes.sub
           }
         })
         this.$router.push({ name: this.redirectTo })
