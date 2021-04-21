@@ -249,6 +249,7 @@ export default {
      * search method collects form data, create queryStrings, and redirects to Search Results view
      */
     async search() {
+      // comment to force commit
       await Analytics.record({
         name: 'search',
         attributes: {
