@@ -151,6 +151,7 @@ import { required, minLength } from 'vuelidate/lib/validators'
 import { mapState, mapGetters } from 'vuex'
 import { Logger } from '@aws-amplify/core'
 import { Loading } from 'quasar'
+import { Analytics } from '@aws-amplify/analytics'
 
 const logger = new Logger('FlightSelection')
 const countryList = [
